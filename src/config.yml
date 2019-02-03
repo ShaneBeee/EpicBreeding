@@ -1,0 +1,25 @@
+# Epic Breeding
+# By: ShaneBee
+
+
+Options:
+
+    # Select the worlds you would like enabled
+    Worlds:
+      - world
+
+    # Delay in minutes, every x minutes, the system will loop available mothers and check if they are due to give birth.
+    Birth Delay: 5
+
+    # Set the chance a female animal spawns (Chance with max 100, males will be the remainder of 100)
+    Female Chance: 50
+
+    # The min/max Minecraft days before a female animal will give birth to her babies
+    Breeding Days:
+      Min: 10
+      Max: 20
+
+
+Messages:
+  Prefix: '&7[&bEpicBreeding&7]'
+  Reload Config: '&aConfig has reloaded'

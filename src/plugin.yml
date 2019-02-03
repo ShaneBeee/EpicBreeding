@@ -1,0 +1,12 @@
+main: tk.shanebee.epicBreeding.EpicBreeding
+name: EpicBreeding
+version: 1.0.0
+author: ShaneBee
+website: https://ShaneBee.tk
+api-version: 1.13
+
+commands:
+  epicbreeding:
+    aliases: [eb]
+    permission: epicbreeding.admin
+    permission-message: '&cYou do not have permission to use this command'

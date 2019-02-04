@@ -20,7 +20,7 @@ public class Breedable {
 
     public static boolean isPregnant(Entity e) {
         if (getGender(e) == Gender.FEMALE) {
-            return (e.getName().contains("♀+"));
+            return e.getName().contains("♀+");
         } return false;
     }
 
@@ -80,20 +80,23 @@ public class Breedable {
                 break;
             case RABBIT:
                 switch (mat) {
-                    case DANDELION:
                     case CARROT:
+                    case DANDELION:
                     case GOLDEN_CARROT:
                         return true;
                 }
                 break;
             case LLAMA:
-                if (mat == Material.HAY_BLOCK) return true;
+                if (mat == Material.HAY_BLOCK) {
+                    return true;
+                }
                 break;
             case TURTLE:
-                if (mat == Material.SEAGRASS) return true;
+                if (mat == Material.SEAGRASS) {
+                    return true;
+                }
                 break;
         }
         return false;
     }
-
 }

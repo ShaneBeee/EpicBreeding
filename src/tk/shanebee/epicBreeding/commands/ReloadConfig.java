@@ -8,14 +8,12 @@ import tk.shanebee.epicBreeding.EpicBreeding;
 
 public class ReloadConfig implements CommandExecutor {
 
-
     private EpicBreeding instance;
 
     public ReloadConfig(EpicBreeding main) {
         this.instance = main;
     }
 
-    @Override
     public boolean onCommand(CommandSender sender, Command cmd, String s, String[] args) {
         if (args.length == 1) {
             if (args[0].equalsIgnoreCase("reload")) {
@@ -25,7 +23,6 @@ public class ReloadConfig implements CommandExecutor {
                 sender.sendMessage(ChatColor.translateAlternateColorCodes('&', prefix + " " + reloadMsg));
             }
         }
-
         return true;
     }
 }

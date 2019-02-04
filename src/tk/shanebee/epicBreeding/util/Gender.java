@@ -4,10 +4,7 @@ import org.bukkit.ChatColor;
 import org.bukkit.entity.Entity;
 
 public enum Gender {
-
-    MALE("male", "him"),
-    FEMALE("female", "her"),
-    ;
+    MALE("male", "him"), FEMALE("female", "her");
 
     private String name;
     private String pronoun;
@@ -18,11 +15,11 @@ public enum Gender {
     }
 
     public String getName() {
-        return name;
+        return this.name;
     }
 
     public String getPronoun() {
-        return pronoun;
+        return this.pronoun;
     }
 
     public static void setGender(Entity entity, Gender gender) {
@@ -34,5 +31,4 @@ public enum Gender {
                 entity.setCustomName(ChatColor.AQUA + "♂");
         }
     }
-
 }

@@ -22,14 +22,14 @@ public class Config {
     }
 
     public void loadConfig() {
-        main.saveDefaultConfig();
+        this.main.saveDefaultConfig();
     }
 
     public void createMother(Entity entity, EpicBreeding main) {
         int min = main.getConfig().getInt("Options.Breeding Days.Min");
         int max = main.getConfig().getInt("Options.Breeding Days.Max");
 
-        final long RANDOM_DAY = (ThreadLocalRandom.current().nextInt(min, max)) * 20 * 60000;
+        long RANDOM_DAY = ThreadLocalRandom.current().nextInt(min, max) * 20 * 60000;
 
         Calendar date = Calendar.getInstance();
         long t = date.getTimeInMillis();
@@ -42,7 +42,6 @@ public class Config {
         try {
             motherConfig.save(file);
         } catch (IOException e) {
-            //e.printStackTrace();
             Bukkit.getConsoleSender().sendMessage(ChatColor.RED + "ERROR SAVING MOTHER");
         }
     }
@@ -50,7 +49,6 @@ public class Config {
     public static FileConfiguration getConfig() {
         File file = new File("plugins/EpicBreeding", "Mothers.yml");
         return YamlConfiguration.loadConfiguration(file);
-
     }
 
     public void createMotherConfig() {
@@ -71,5 +69,4 @@ public class Config {
             }
         }
     }
-
 }

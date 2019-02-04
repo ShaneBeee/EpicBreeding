@@ -20,8 +20,8 @@ import java.util.HashMap;
 
 public class Breeding implements Listener {
 
-    private HashMap<Player, Gender> genderMAP = new HashMap();
-    private HashMap<Player, Entity> entityMAP = new HashMap();
+    private HashMap<Player, Gender> genderMAP = new HashMap<>();
+    private HashMap<Player, Entity> entityMAP = new HashMap<>();
     private EpicBreeding main;
 
     public Breeding(EpicBreeding main) {

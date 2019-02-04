@@ -63,7 +63,7 @@ public class Breeding implements Listener {
                         player.sendMessage(ChatColor.GREEN + "You have successfully bred 2 " + entity
                                 .getType().toString().toLowerCase() + "'s");
                         if (Breedable.getGender(entity) == Gender.FEMALE) {
-                            entity.setCustomName(ChatColor.LIGHT_PURPLE + "���+");
+                            entity.setCustomName(ChatColor.LIGHT_PURPLE + "♀+");
                             Location locF = entity.getLocation();
                             locF.setY(locF.getY() + 2.0D);
                             entity.getWorld().spawnParticle(Particle.HEART, locF, 1);
@@ -71,7 +71,7 @@ public class Breeding implements Listener {
                             config.createMother(entity, main);
                             ((Ageable) entityMAP.get(player)).setBreed(false);
                         } else {
-                            (entityMAP.get(player)).setCustomName(ChatColor.LIGHT_PURPLE + "���+");
+                            (entityMAP.get(player)).setCustomName(ChatColor.LIGHT_PURPLE + "♀+");
                             Location locM = (entityMAP.get(player)).getLocation();
                             locM.setY(locM.getY() + 2.0D);
                             (entityMAP.get(player)).getWorld().spawnParticle(Particle.HEART, locM, 1);

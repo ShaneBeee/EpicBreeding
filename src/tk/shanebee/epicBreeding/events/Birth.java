@@ -14,11 +14,8 @@ import java.util.Calendar;
 import java.util.Date;
 
 public class Birth {
-
     private FileConfiguration config = Config.getConfig();
 
-
-    @SuppressWarnings("deprecation")
     public void checkDueDates() {
         for (String uuid : config.getStringList("Mothers")) {
             for (World world : Bukkit.getWorlds()) {
@@ -35,7 +32,6 @@ public class Birth {
                                 ((Ageable) entity.getWorld().spawnEntity(loc, type)).setBaby();
                                 config.set("Mothers." + uuid, null);
                             }
-
                         }
                     }
                 }

@@ -21,7 +21,7 @@ public class Birth {
             for (World world : Bukkit.getWorlds()) {
                 for (Chunk chunk : world.getLoadedChunks()) {
                     for (Entity entity : chunk.getEntities()) {
-                        if (entity.getUniqueId().equals(uuid)) {
+                        if (entity.getUniqueId().toString().equals(uuid)) {
                             String dataS = config.getString("Mothers." + uuid + ".Due Date");
                             Date dueDate = new Date(dataS);
                             Calendar cal = Calendar.getInstance();
